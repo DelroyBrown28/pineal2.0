@@ -1,0 +1,200 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    background-color: #C8CAC1;
+
+}
+
+
+@media only screen and (min-width : 1224px) {
+    /*---TOP CONTANTS---*/
+
+    .top_contents {
+        position: relative;
+        width: 95%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+    }
+
+    .small_menu_left {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .about {
+        margin: 0px 30px;
+
+    }
+
+    .books,
+    .about,
+    .donate {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 200;
+
+    }
+
+    .center_logo {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .center_logo_text {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 200;
+        font-family: 'Josefin Sans', sans-serif;
+
+    }
+
+    #quote_box {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #quote_wrap {
+        width: 384px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+    }
+
+    #quote {
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 200;
+        text-align: right;
+
+    }
+
+    blockquote {
+        margin: 0;
+        align-self: flex-end;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    /*---//  TOP CONTANTS---*/
+    /*---MAIN CONTENTS---*/
+
+
+    .main_contents_wrap {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+
+    }
+
+    .art_vault,
+    .forbidden_unknown,
+    .media_news,
+    .podcasts_music,
+    .socials,
+    .github {
+        margin: 0;
+        font-size: 72px;
+        font-weight: 200;
+        align-self: flex-start;
+
+    }
+
+    .media_news,
+    .podcasts_music {
+        margin-left: 24px;
+    }
+
+    .middle_main {
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        align-self: flex-start;
+
+
+    }
+
+    .main_page_blurb {
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        font-size: 24px;
+        align-self: flex-start;
+        font-family: 'Josefin Sans', sans-serif;
+        color: #7C7C7C;
+        opacity: 0.8;
+    }
+
+    .socials_github {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+
+    }
+
+    .socials {
+        margin: 0;
+        align-self: flex-start;
+        font-weight: 200;
+    }
+
+    /*---//  MAIN CONTENTS---*/
+    /*---BOTTOM CONTENTS---*/
+
+
+    .bottom_contents {
+        width: 95%;
+        height: 80px;
+
+
+    }
+
+    /*---//  BOTTOM CONTENTS---*/
+}
+
+
+/*---HOVERS AND SUCH---*/
+
+.art_vault:hover,
+.forbidden_unknown:hover,
+.media_news:hover,
+.podcasts_music:hover,
+.socials:hover,
+.github:hover {
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+/*---//  HOVERS AND SUCH---*/
