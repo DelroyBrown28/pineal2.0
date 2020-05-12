@@ -11,6 +11,10 @@ html {
     overflow-x: hidden;
 }
 
+.houdini {
+    visibility: hidden;
+}
+
 @media only screen and (min-width : 1224px) {
 
     body,
@@ -87,7 +91,7 @@ html {
 
     }
 
-    .art_valut_title,
+    .art_vault_title,
     .forbidden_unknown_title,
     .media_news_title,
     .podcasts_music_title,
@@ -100,7 +104,9 @@ html {
         font-size: 72px;
         margin: 0;
         left: 50px;
+        cursor: pointer;
     }
+
 
     .second_middle_wrap {
         width: 100%;
@@ -122,7 +128,6 @@ html {
 
     .middle_title_blurb {
         display: flex;
-
         flex-flow: row;
 
     }
@@ -186,14 +191,8 @@ html {
 .about:hover,
 .books:hover,
 .donate:hover,
-.art_valut_title:hover,
-.forbidden_unknown_title:hover,
-.media_news_title:hover,
-.podcasts_music:hover,
-.socials:hover,
-.github:hover {
+    {
     color: #000;
-    cursor: pointer;
     transition: 0.1s;
 }
 
