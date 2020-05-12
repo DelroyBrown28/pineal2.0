@@ -15,6 +15,10 @@ html {
     visibility: hidden;
 }
 
+.light_grey_bg {
+    background-color: rgba(128, 128, 128, 0.466);
+}
+
 @media only screen and (min-width : 1224px) {
 
     body,
@@ -27,6 +31,7 @@ html {
         flex-flow: column;
     }
 
+    /*------------**MAIN PAGE**------------*/
     /*---TOP CONTENTS---*/
 
     .top_contents {
@@ -107,7 +112,7 @@ html {
         cursor: pointer;
     }
 
-
+    
     .second_middle_wrap {
         width: 100%;
 
@@ -182,6 +187,44 @@ html {
 
 
     /*---//  BOTTOM CONTENTS---*/
+    /*------------//  **MAIN PAGE**------------*/
+
+    .art_vault_contents {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    .art_carousel {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        opacity: 0;
+        display: flex;
+
+        border: 1px solid yellow;
+    }
+
+    .all_images {
+        position: relative;
+        height: 100%;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .centered_imgs {
+        width: 25%;
+        height: 100%;
+        background-position: center;
+        background-size: auto;
+    }
 
 
 }
