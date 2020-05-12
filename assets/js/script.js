@@ -52,10 +52,15 @@ $(document).ready(function () {
         $(".art_vault_cross").animate({
             opacity: "1",
         }, 2000, "easeInOutCubic")
+        $(".bottom_contents").css("visibility", "hidden")
         $(".art_vault_contents").css("visibility", "visible");
         $(".art_carousel").delay(2000).animate({
             opacity: "1",
         })
+        $(".bottom_art_carousel_wrap").css("visibility", "visible")
+        $(".second_art_carousel").animate({
+            opacity: "1",
+        }, 5000)
         return false;
 
     }
@@ -210,8 +215,6 @@ $(document).ready(function () {
     }
 
 
-
-
     // QUOTES CAROUSEL
     $('.quote_carousel').slick({
         autoplay: true,
@@ -230,5 +233,49 @@ $(document).ready(function () {
         variableWidth: true,
     });
 
+    $(".second_art_carousel").slick({
+        autoplay: true,
+        speed: 8000,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: -4,
+        variableWidth: true,
+    });
 
-});
+
+
+
+    $("#searchBox").submit(function () {
+
+        var search = $("#search_field").val();
+        if (search == "") {
+            alert("Enter a book name or title")
+        } else {
+
+            var url = "";
+            var img = "";
+            var title = "";
+            var author = "";
+
+            $.get("https://www.googleapis.com/books/v1/volumes?q=" + search, function (response) {
+
+                for (i = 0; i < response.items.length; i++) {
+                    title = $('<h4 class="book_title">' + response.items[i].volumeInfo.title + '</h4>');
+                    author = $('<h5 class="book_author">Author: ' + response.items[i].volumeInfo.authors + '</h5>');
+                    img = $('<img class="book_image"><br><a href=' + response.items[i].volumeInfo.infoLink + '><button>Read More</button><br></a><hr>');
+                    url = response.items[i].volumeInfo.imageLinks.thumbnail;
+                    img.attr('src', url);
+                    title.appendTo('.all_books');
+                    author.appendTo('.book_author');
+                    img.appendTo('.book_image');
+                }
+            });
+
+        }
+        return false;
+    });
+
+
+
+
+})

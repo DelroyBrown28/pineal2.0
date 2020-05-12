@@ -179,7 +179,36 @@ html {
         display: flex;
         justify-content: center;
 
+
     }
+
+    .bottom_art_carousel_wrap {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+
+    }
+
+    .second_art_carousel {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+
+    .new_images {
+        width: 25%;
+        height: 100%;
+
+    }
+
 
     .quote_carousel {
         position: relative;
@@ -296,7 +325,7 @@ html {
         font-size: 18px;
     }
 
-    .search_button {
+    #search_button {
         position: relative;
         width: 150px;
         height: 50px;
@@ -331,13 +360,15 @@ html {
     transition: 0.1s;
 }
 
-.search_button:active {
+#search_button:active {
     border-radius: 0px;
     background: linear-gradient(145deg, #b4b6ae, #d6d8cf);
     box-shadow: 5px 5px 15px #aeb0a8,
         -5px -5px 15px #e2e4da;
 
 }
+
+
 
 
 /*---//  HOVERS AND SUCH---*/
