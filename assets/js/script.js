@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+
+    $(".art_vault_title, .forbidden_unknown_title, .media_news_title, .podcasts_music, .socials, .github").hover(function () {
+        $(this).css("color", "black");
+    }, function () {
+        $(this).css("color", "white");
+    });
+
+
     $(".art_vault_title").click(hideMainElements);
 
     function hideMainElements() {
@@ -37,16 +45,16 @@ $(document).ready(function () {
             bottom: "500%",
         }, 3000, "easeInOutCubic")
 
-}
+    }
 
 
-// QUOTES CAROUSEL
-$('.quote_carousel').slick({
-    autoplay: true,
-    speed: 10000,
-    dots: false,
-    infinite: true,
-});
+    // QUOTES CAROUSEL
+    $('.quote_carousel').slick({
+        autoplay: true,
+        speed: 10000,
+        dots: false,
+        infinite: true,
+    });
 
 
 
