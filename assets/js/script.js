@@ -52,14 +52,15 @@ $(document).ready(function () {
         $(".art_vault_cross").animate({
             opacity: "1",
         }, 2000, "easeInOutCubic")
-        $(".bottom_contents").css("visibility", "hidden")
         $(".art_vault_contents").css("visibility", "visible");
         $(".art_carousel").delay(2000).animate({
             opacity: "1",
         })
+        $(".bottom_contents").css("visibility", "hidden")
         $(".bottom_art_carousel_wrap").css("visibility", "visible")
         $(".second_art_carousel").animate({
             opacity: "1",
+            bottom: "0",
         }, 5000)
         return false;
 
@@ -113,6 +114,14 @@ $(document).ready(function () {
             color: "white",
             bottom: "0%",
         }, 800, "easeInOutCubic");
+        $(".bottom_contents").css("visibility", "visible")
+        $(".second_art_carousel").animate({
+            opacity: "0",
+            bottom: "-100%",
+
+        }, 5000)
+        $(".bottom_art_carousel_wrap").css("visibility", "hidden")
+
         return false;
 
 
@@ -238,7 +247,7 @@ $(document).ready(function () {
         speed: 8000,
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: -4,
+        slidesToScroll: 1,
         variableWidth: true,
     });
 
