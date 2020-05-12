@@ -121,10 +121,8 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
+        variableWidth: true,
     });
-
-
-
 
 
 });
