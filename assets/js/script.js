@@ -14,9 +14,12 @@ $(document).ready(function () {
 
     function hideMainElements() {
         $(".art_vault_title").animate({
-            color: "black",
             bottom: "20%",
         }, 800, "easeInOutCubic");
+        $("body").animate({
+            backgroundColor: "#141414",
+        }, 2000)
+        $(".top_contents").css("visibility", "hidden");
         $(".forbidden_unknown_title").animate({
             color: "black",
             opacity: "0",
@@ -63,6 +66,10 @@ $(document).ready(function () {
     function returnMainElements() {
         $(".art_carousel").delay(2000).animate({
             opacity: "0",
+        })
+        $(".top_contents").css("visibility", "visible");
+        $("body").animate({
+            backgroundColor: "#C8CAC1",
         })
         $(".art_vault_contents").css("visibility", "hidden");
         $(".art_vault_cross").animate({
@@ -218,8 +225,8 @@ $(document).ready(function () {
         speed: 5000,
         dots: false,
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         variableWidth: true,
     });
 
