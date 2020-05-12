@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     // HOVER EFFECT FOR TITLES
     $(".art_vault_title, .forbidden_unknown_title, .media_news_title, .podcasts_music, .socials, .github").hover(function () {
         $(this).css("color", "black");
@@ -16,45 +17,97 @@ $(document).ready(function () {
             color: "black",
             bottom: "20%",
         }, 800, "easeInOutCubic");
-        $(".forbidden_unknown_title").delay(200).animate({
+        $(".forbidden_unknown_title").animate({
             color: "black",
             opacity: "0",
             bottom: "500%",
-        }, 3000, "easeInOutCubic")
-        $(".media_news_title").delay(300).animate({
+        }, 2000, "easeInOutCubic")
+        $(".media_news_title").delay(100).animate({
             color: "black",
             opacity: "0",
             bottom: "500%",
-        }, 3000, "easeInOutCubic")
-        $(".podcasts_music").delay(500).animate({
+        }, 2000, "easeInOutCubic")
+        $(".podcasts_music").delay(300).animate({
             color: "black",
             opacity: "0",
             bottom: "500%",
-        }, 3000, "easeInOutCubic")
-        $(".main_blurb").delay(500).animate({
+        }, 2000, "easeInOutCubic")
+        $(".main_blurb").delay(300).animate({
             color: "black",
             opacity: "0",
-        }, 3000, "easeInOutCubic")
-        $(".socials").delay(700).animate({
-            color: "black",
-            opacity: "0",
-            bottom: "500%",
-        }, 3000, "easeInOutCubic")
-        $(".github").delay(900).animate({
+        }, 2000, "easeInOutCubic")
+        $(".socials").delay(500).animate({
             color: "black",
             opacity: "0",
             bottom: "500%",
-        }, 3000, "easeInOutCubic")
+        }, 2000, "easeInOutCubic")
+        $(".github").delay(700).animate({
+            color: "black",
+            opacity: "0",
+            bottom: "500%",
+        }, 2000, "easeInOutCubic")
+        $(".art_vault_cross").animate({
+            opacity: "1",
+        }, 2000, "easeInOutCubic")
         $(".art_vault_contents").css("visibility", "visible");
-        $(".art_carousel").delay(3000).animate({
+        $(".art_carousel").delay(2000).animate({
             opacity: "1",
         })
+        return false;
+
+    }
+
+    $(".art_vault_cross").click(returnMainElements);
+
+    function returnMainElements() {
+        $(".art_carousel").delay(2000).animate({
+            opacity: "0",
+        })
+        $(".art_vault_contents").css("visibility", "hidden");
+        $(".art_vault_cross").animate({
+            opacity: "0",
+        }, 2000, "easeInOutCubic")
+        $(".github").delay(700).animate({
+            color: "white",
+            opacity: "1",
+            bottom: "0%",
+        }, 2000, "easeInOutCubic")
+        $(".socials").delay(500).animate({
+            color: "white",
+            opacity: "1",
+            bottom: "0%",
+        }, 2000, "easeInOutCubic")
+        $(".main_blurb").delay(300).animate({
+            color: "#7C7C7C",
+            opacity: "1",
+        }, 2000, "easeInOutCubic")
+        $(".podcasts_music").delay(300).animate({
+            color: "white",
+            opacity: "1",
+            bottom: "0%",
+        }, 2000, "easeInOutCubic")
+        $(".media_news_title").delay(100).animate({
+            color: "white",
+            opacity: "1",
+            bottom: "0%",
+        }, 2000, "easeInOutCubic")
+        $(".forbidden_unknown_title").animate({
+            color: "white",
+            opacity: "1",
+            bottom: "0%",
+        }, 2000, "easeInOutCubic")
+        $(".art_vault_title").animate({
+            color: "white",
+            bottom: "0%",
+        }, 800, "easeInOutCubic");
+        return false;
+
 
     }
 
 
     // QUOTES CAROUSEL
-    $('.quote_carousel, .art_carousel').slick({
+    $('.quote_carousel').slick({
         autoplay: true,
         speed: 10000,
         dots: false,
