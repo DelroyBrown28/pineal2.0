@@ -1,12 +1,13 @@
 $(document).ready(function () {
 
+    $(document).mousemove(function (e) {
 
-    // HOVER EFFECT FOR TITLES
-    $(".art_vault_title, .forbidden_unknown_title, .media_news_title, .podcasts_music, .socials, .github").hover(function () {
-        $(this).css("color", "black");
-    }, function () {
-        $(this).css("color", "white");
-    });
+        $(".pointer").css({
+            left: e.pageX,
+            top: e.pageY,
+        })
+
+    })
 
 
     // THROWS ELEMENTS OFF THE PAGE TO MAKE WAY FOR NEW
@@ -21,31 +22,25 @@ $(document).ready(function () {
         }, 2000)
         $(".top_contents").css("visibility", "hidden");
         $(".forbidden_unknown_title").animate({
-            color: "black",
             opacity: "0",
             bottom: "500%",
         }, 2000, "easeInOutCubic")
         $(".media_news_title").delay(100).animate({
-            color: "black",
             opacity: "0",
             bottom: "500%",
         }, 2000, "easeInOutCubic")
         $(".podcasts_music").delay(300).animate({
-            color: "black",
             opacity: "0",
             bottom: "500%",
         }, 2000, "easeInOutCubic")
         $(".main_blurb").delay(300).animate({
-            color: "black",
             opacity: "0",
         }, 2000, "easeInOutCubic")
         $(".socials").delay(500).animate({
-            color: "black",
             opacity: "0",
             bottom: "500%",
         }, 2000, "easeInOutCubic")
         $(".github").delay(700).animate({
-            color: "black",
             opacity: "0",
             bottom: "500%",
         }, 2000, "easeInOutCubic")
@@ -82,36 +77,29 @@ $(document).ready(function () {
             opacity: "0",
         }, 2000, "easeInOutCubic")
         $(".github").delay(700).animate({
-            color: "white",
             opacity: "1",
             bottom: "0%",
         }, 2000, "easeInOutCubic")
         $(".socials").delay(500).animate({
-            color: "white",
             opacity: "1",
             bottom: "0%",
         }, 2000, "easeInOutCubic")
         $(".main_blurb").delay(300).animate({
-            color: "#7C7C7C",
             opacity: "1",
         }, 2000, "easeInOutCubic")
         $(".podcasts_music").delay(300).animate({
-            color: "white",
             opacity: "1",
             bottom: "0%",
         }, 2000, "easeInOutCubic")
         $(".media_news_title").delay(100).animate({
-            color: "white",
             opacity: "1",
             bottom: "0%",
         }, 2000, "easeInOutCubic")
         $(".forbidden_unknown_title").animate({
-            color: "white",
             opacity: "1",
             bottom: "0%",
         }, 2000, "easeInOutCubic")
         $(".art_vault_title").animate({
-            color: "white",
             bottom: "0%",
         }, 800, "easeInOutCubic");
         $(".bottom_contents").css("visibility", "visible")
@@ -283,8 +271,5 @@ $(document).ready(function () {
         }
         return false;
     });
-
-
-
 
 })

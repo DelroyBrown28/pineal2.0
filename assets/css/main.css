@@ -9,9 +9,31 @@ html {
     font-family: 'Cormorant Garamond', serif;
     background-color: #C8CAC1;
     overflow-x: hidden;
+
 }
 
+* {
+    cursor: crosshair;
 
+}
+
+.pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(255, 255, 255, .8);
+    border-radius: 0%;
+    pointer-events: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 100;
+
+
+}
 
 .houdini {
     visibility: hidden;
@@ -36,6 +58,7 @@ html {
         justify-content: space-between;
         flex-flow: column;
         overflow: hidden;
+
     }
 
     /*------------**MAIN PAGE**------------*/
@@ -368,6 +391,16 @@ html {
     box-shadow: 5px 5px 15px #aeb0a8,
         -5px -5px 15px #e2e4da;
 
+}
+
+.art_vault_title:hover,
+.forbidden_unknown_title:hover,
+.media_news_title:hover,
+.podcasts_music:hover,
+.socials:hover,
+.github:hover {
+    filter: blur(5px);
+    transition: 1s;
 }
 
 
