@@ -1,14 +1,5 @@
 $(document).ready(function () {
 
-    $(document).mousemove(function (e) {
-
-        $(".pointer").css({
-            left: e.pageX,
-            top: e.pageY,
-        })
-
-    })
-
 
     // THROWS ELEMENTS OFF THE PAGE TO MAKE WAY FOR NEW
     $(".art_vault_title").click(hideMainElements);
